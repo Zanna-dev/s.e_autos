@@ -1,0 +1,202 @@
+--- Page 1 ---
+DOUBLE S.E AUTOS
+ LUXURY AUTOMOTIVE WEBSITE - POWER PROMPT
+Purpose: Create a scalable, premium digital showroom that combines senior React engineering, luxury
+automotive visual design, professional vehicle photography, and refined product motion.
+ROLE & PROJECT
+Project Direction
+Act as a Senior Frontend React Engineer, UI/UX Designer, Automotive Product Photographer, Luxury
+Brand Designer, Creative Director, and AI Product-Motion Designer.
+Design and develop a premium automotive website for DOUBLE S.E AUTOS, a professional dealership focused
+on quality pre-owned vehicles.
+This must not feel like a generic car-dealership template. Treat the project as a high-end digital automotive
+experience where frontend engineering, luxury visual design, automotive photography, interaction design, and
+product motion work together.
+01
+Creative Foundation
+Before designing individual sections, establish a strong visual and experience system for the entire website.
+The website should feel premium, cinematic, confident, modern, refined, and trustworthy.
+Think of the experience as a digital showroom, not simply a website containing cars.
+Cars are the hero products. Give them space, scale, and visual importance. Use strong typography, intentional
+negative space, sophisticated layouts, premium automotive imagery, and restrained motion to create a sense of
+quality.
+Luxury should come from composition, photography, typography, spacing, interaction, and attention to
+detail - not excessive gold, gradients, glowing effects, or unnecessary decoration.
+The interface should immediately communicate that DOUBLE S.E AUTOS is a serious automotive brand.
+02
+Visual Direction
+Build a distinctive automotive design system rather than copying a conventional dealership website.
+Use a sophisticated neutral foundation such as graphite, charcoal, warm off-white, and deep black,
+complemented by one carefully selected premium brand accent.
+Automotive photography should feel professionally shot: accurate vehicle proportions, realistic reflections,
+controlled highlights, natural shadows, premium environments, and detailed interiors.
+
+Strong editorial typography
+
+Generous negative space
+
+Clear visual hierarchy
+
+Cinematic automotive photography
+
+Subtle layering and depth
+
+Refined cards and surfaces
+
+Consistent spacing
+
+--- Page 2 ---
+
+Premium iconography
+
+Intentional contrast
+03
+User Experience
+Design the customer journey around one primary goal: Discover -> Explore -> Trust -> Enquire -> Purchase.
+A visitor should be able to quickly understand the brand, browse available vehicles, inspect a vehicle in detail, and
+contact DOUBLE S.E AUTOS without unnecessary friction.
+Keep navigation simple and intuitive. Suggested core experience: Home -> Inventory -> Vehicle Details ->
+About -> Contact. Add supporting functionality only where it improves the buying experience.
+04
+Homepage Experience
+Create a strong cinematic introduction to DOUBLE S.E AUTOS.
+The hero should feel like the opening frame of a premium automotive campaign rather than a standard website
+banner.
+Introduce the brand, a carefully selected hero vehicle, concise messaging, and clear calls to action such as
+Explore Vehicles and View Inventory.
+As the visitor scrolls, gradually transition from brand storytelling into available vehicles, dealership value, featured
+inventory, and conversion-focused content. Do not overload the homepage with every piece of information.
+05
+Vehicle Inventory
+Treat the inventory as a curated digital showroom.
+Create elegant vehicle cards with strong photography and essential information such as Make / Model, Year,
+Mileage, Transmission, and Price.
+Provide useful search, filtering, and sorting without making the interface visually heavy. Every vehicle should lead
+to a dedicated product-detail experience.
+06
+Vehicle Detail Experience
+Treat each vehicle like a premium product launch page.
+Prioritize large automotive photography and make it easy to explore exterior, interior, key specifications, features,
+mileage, transmission, condition, and pricing.
+Provide clear actions for enquiry, WhatsApp/contact, scheduling a viewing, or requesting more information.
+The page should help customers confidently evaluate the vehicle without feeling like they are reading a database
+record.
+07
+Motion & Interaction
+Use motion as part of the storytelling. Motion should feel smooth, deliberate, and automotive-inspired.
+Avoid excessive animation, constant movement, unnecessary 3D effects, or interactions that interfere with
+usability.
+Where appropriate, use AI-assisted automotive visuals or product-motion sequences to strengthen hero moments
+and campaign sections while maintaining realism and brand consistency.
+
+--- Page 3 ---
+
+Scroll reveals
+
+Image transitions
+
+Hover interactions
+
+Navigation transitions
+
+Micro-interactions
+
+Vehicle-card responses
+
+Typography reveals
+
+Subtle parallax
+
+Page transitions
+08
+Responsive Experience
+Design mobile-first and fully responsive.
+The experience must scale naturally across Mobile -> Tablet -> Laptop -> Desktop -> Large displays.
+Do not simply shrink the desktop interface. Reconsider layout, typography, navigation, imagery, spacing, and
+interaction patterns for each breakpoint while maintaining the same premium identity.
+09
+React Engineering
+Build the project as a production-quality React application using modern frontend engineering practices. Use
+React + TypeScript.
+Structure the application around reusable, maintainable components and clean separation of concerns.
+Create reusable systems for vehicle cards, inventory data, navigation, buttons, filters, galleries, specification
+displays, and shared layout components.
+Keep vehicle data separate from presentation so the inventory can later connect to a real backend, CMS, or API
+without rebuilding the frontend.
+
+Clean component architecture
+
+Maintainable code
+
+Semantic HTML
+
+Accessibility
+
+SEO
+
+Responsive images
+
+Lazy loading
+
+Optimized assets
+
+Strong performance
+
+Reduced layout shift
+
+Smooth animation performance
+10
+Design for Growth
+Build the foundation so DOUBLE S.E AUTOS can later introduce more advanced functionality.
+
+--- Page 4 ---
+Do not implement unnecessary complexity now. Architect the frontend so these capabilities can be introduced
+later.
+
+Dynamic inventory management
+
+Advanced vehicle search
+
+Saved vehicles
+
+Vehicle comparison
+
+Finance enquiries
+
+Appointment booking
+
+Customer accounts
+
+Vehicle recommendations
+
+Promotional campaigns
+
+CMS/admin management
+11
+Quality Standard
+Do not produce a basic dealership template.
+Avoid generic layouts, oversized gradients, excessive glassmorphism, random animations, unnecessary glowing
+effects, crowded interfaces, unrealistic AI cars, weak typography, excessive text, repetitive card sections, cheap
+luxury styling, or visual effects added simply to make the website look modern.
+Every design and motion decision must support either the vehicle, the brand, usability, or conversion.
+The finished product should feel like DOUBLE S.E AUTOS invested in a professional creative agency and senior
+engineering team to build its digital showroom.
+FIRST TASK
+Establish the Foundation Before Coding
+Do not immediately generate the entire application.
+Begin by establishing the project's foundation. Present the following clearly, with brief reasoning, before
+proceeding into the actual UI and implementation section by section.
+
+Creative direction
+
+Brand / visual system
+
+Proposed sitemap
+
+Homepage information architecture
+
+Design system direction
+
+Motion-design language
+
+Recommended React architecture
