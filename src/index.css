@@ -1,6 +1,7 @@
 @import './styles/tokens.css';
 @import './styles/experience.css';
 @import './styles/dialogs.css';
+@import './styles/routes.css';
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 108px; }
 body { margin: 0; min-width: 0; }
@@ -30,7 +31,7 @@ h1, h2, h3, p { margin: 0; }
 .navigation { display: flex; gap: 34px; align-items: center; font-size: 12px; }
 .navigation a { position: relative; padding: 14px 0; }
 .navigation a::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .22s; }
-.navigation a:hover::after, .navigation a[aria-current]::after { transform: scaleX(1); }
+.navigation a[aria-current]::after { transform: scaleX(1); }
 .header-actions { display: flex; gap: 18px; align-items: center; }
 .icon-button { width: 44px; height: 44px; display: inline-grid; place-items: center; background: transparent; border: 1px solid var(--line); border-radius: 50%; transition: background .2s, transform .2s; }
 .icon-button:hover { background: #88888820; transform: rotate(-5deg); }
@@ -65,7 +66,7 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 @keyframes enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes photo-enter { from { opacity: .2; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
 @media (max-width: 1000px) { .navigation { gap: 20px; } .brand-symbol { width: 64px; } .header-actions { gap: 10px; } }
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
  .site-header, .site-header.is-scrolled { min-height: 78px; padding: 13px 22px; gap: 10px; }
  .brand-wordmark { font-size: 11px; letter-spacing: 1px; } .brand-wordmark > span { font-size: 7px; }
  .brand-symbol { width: 60px; height: 27px; } .brand-lockup { gap: 9px; }
@@ -78,6 +79,67 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
  .site-header.menu-open { background: var(--glass); color: var(--text); }
  .section-shell { padding: 60px var(--gutter); }
  h2 { letter-spacing: -1.4px; } .eyebrow { font-size: 9px; letter-spacing: 1.5px; }
+}
+/* Components must fit their available space, including intermediate device widths. */
+.vehicle-card { container-type: inline-size; }
+.vehicle-card-body > div, .detail-gallery, .detail-content, .footer-grid > div { min-width: 0; }
+.vehicle-card h3, .detail-content h1, .spec-grid dd { overflow-wrap: anywhere; }
+.angle-controls { flex-wrap: wrap; }
+.angle-controls button { max-width: 100%; overflow-wrap: anywhere; }
+.navigation.is-open { max-height: calc(100dvh - 78px); overflow-y: auto; overscroll-behavior: contain; }
+.filter-pills button, .hero-angle-selector button, .slideshow-control,
+.card-price .icon-button, .contact-line, .footer-link, .social-links a { min-height: 44px; }
+.card-price .icon-button { min-width: 44px; }
+.modal { max-height: min(92dvh, 1000px); }
+@container (max-width: 360px) {
+ .vehicle-card-body { flex-wrap: wrap; }
+ .card-price { width: 100%; flex-direction: row; align-items: center; justify-content: space-between; gap: 8px; }
+ .card-price strong, .card-price .icon-button { margin-top: 0; }
+}
+@media (max-width: 1000px) {
+ .vehicle-detail-layout { grid-template-columns: minmax(0, 1fr); }
+ .vehicle-detail-layout .detail-gallery > img { aspect-ratio: 1.7; }
+ .vehicle-detail-layout .detail-content { padding: 28px; }
+ .contact-modal[open] { display: block; }
+ .contact-aside { padding: 30px; }
+ .contact-aside h2 { font-size: 36px; margin: 16px 0; }
+ .contact-aside-bottom { display: none; }
+ .contact-aside .eyebrow { padding-right: 44px; }
+ .contact-form-area { padding: 28px; }
+ .form-grid input, .form-grid select, .form-grid textarea,
+ .collection-tools select, .search-field input { font-size: 16px; }
+ .collection-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+ .collection-tools > label, .search-field input { min-width: 0; }
+ .collection-tools select, .search-field input { width: 100%; max-width: none; }
+ .header-actions .icon-button { width: 44px; height: 44px; }
+}
+@media (max-width: 600px) {
+ .form-grid { grid-template-columns: minmax(0, 1fr); }
+ .hero-console { position: relative; inset: auto; margin: 32px -6px 0; }
+ .hero { padding-bottom: 20px; min-height: 0; }
+ .hero-proof { margin-top: 180px; }
+ .hero-visual { bottom: 200px; }
+ .vehicle-detail-layout .detail-content { padding: 24px 20px; }
+ .detail-content .button { width: 100%; }
+ .finder-result-copy { padding: 20px 16px; }
+ .finder-result-copy .button { width: 100%; gap: 12px; padding-inline: 14px; }
+ .finder-foot { flex-wrap: wrap; }
+ .footer-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 360px) {
+ .site-header, .site-header.is-scrolled { padding-inline: 16px; }
+ .brand-symbol { width: 48px; }
+ .brand-lockup { gap: 6px; }
+ .hero h1 { font-size: 46px; }
+ .collection-tools { grid-template-columns: minmax(0, 1fr); }
+ .vehicle-selector { flex-wrap: wrap; gap: 6px 16px; }
+ .vehicle-selector button { flex: 1 0 40%; }
+}
+@media (hover: none) {
+ .button:hover, .vehicle-image-button:hover img, .conversation-orb:hover { transform: none; }
+}
+@media (min-width: 1800px) {
+ :root { --gutter: max(100px, calc((100vw - 1550px) / 2)); }
 }
 @media (prefers-reduced-motion: reduce) {
  html { scroll-behavior: auto; }

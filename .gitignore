@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Server secrets, inventory database, and private vehicle images
+.env
+.env.*
+!.env.example
+data/

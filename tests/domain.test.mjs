@@ -63,3 +63,18 @@ test('every gallery has a unique vehicle identity and readable local image asset
     }
   }
 })
+
+const { readInventoryFilters, selectInventory } = await import(await moduleUrl('src/utils/inventory.ts'))
+test('shareable filters restore currency and sort without mutating stock', () => {
+ const before = mockVehicles.map(v => v.id)
+ const filters = readInventoryFilters(new URLSearchParams('category=Sedan&currency=EUR&sort=price-desc'))
+ assert.equal(filters.currency, 'EUR')
+ assert.deepEqual(selectInventory(mockVehicles, filters).map(v => v.make), ['BMW', 'Lexus'])
+ assert.deepEqual(mockVehicles.map(v => v.id), before)
+ assert.equal(selectInventory(mockVehicles, readInventoryFilters(new URLSearchParams('sort=price-asc')))[0].make, 'Chevrolet')
+})
+test('malformed URL filters fall back safely and encoded searches roundtrip', () => {
+ const filters = readInventoryFilters(new URLSearchParams('category=boat&usage=invalid&currency=BAD&sort=invalid'))
+ assert.deepEqual(filters, { query: '', category: 'All', usage: 'All', currency: 'NGN', sort: 'featured' })
+ assert.equal(readInventoryFilters(new URLSearchParams({q: 'BMW & Lexus'})).query, 'BMW & Lexus')
+})

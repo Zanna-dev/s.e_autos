@@ -6,6 +6,6 @@ export function formatPrice(amountNGN: number, currency: Currency) {
 }
 export function filterVehicles(vehicles: Vehicle[], query: string, category: string, usage: string) {
   const term = query.trim().toLowerCase()
-  return vehicles.filter((vehicle) => (category === 'All' || vehicle.category === category) &&
+  return vehicles.filter((vehicle) => (category === 'All' || vehicle.category === category || vehicle.fuelType === category) &&
     (usage === 'All' || vehicle.usage === usage) && `${vehicle.name} ${vehicle.make} ${vehicle.color}`.toLowerCase().includes(term))
 }
